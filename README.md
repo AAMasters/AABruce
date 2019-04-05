@@ -1,23 +1,24 @@
-# I'm Bruce, an i-bot!
-AKA an indicator algobot running on the AAPlatform by Advanced Algos Ltd.
+# Bruce
 
-### My Specialty
-I produce two datasets:
-* One with candles at 1 minute resolution;
-* One with volumes at 1 minute resolution.
+Bruce is a low level Indicator bot that has as an input trades files and outputs 1 minute candles packaged on daily files.
 
-### Ideal for
-My datasets are ideal for analysing candle shapes and types, candle patterns, volume fluctuations and for producing all kinds of studies based in those two (candles & volumes) Technical Analysis fundamentals, and serve as the basis for producing candles and volumes in other resolution levels. 
+## Single Period Daily
 
-### Details
+This process reads trades packed in 1 minutes files. For every day it creates a file with candles at 1 minute.
 
-| **Name** | **Type** | **Version** | **Release Date** | **Current dataSet** |
-|----------|----------|----------|----------|----------|
-| Bruce | Indicator | 1.0 | 28 Feb 2018 | dataSet.V1 |
+### Start Mode
 
-# My Products
+This process runs every 1 minute under allMonths start mode, where a yearly range must be specified (initial processing year and final processing year)
 
-## Dataset 1: Candles in 1 Minute Resolutions
+```
+"startMode": {
+        "allMonths": {
+          "run": "true",
+          "minYear": "2019",
+          "maxYear": "2021"
+        }
+      }
+```
 
 ### Current Dataset Scope
 * **Exchanges**: Poloniex, Coss
